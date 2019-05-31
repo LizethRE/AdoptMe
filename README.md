@@ -1,5 +1,5 @@
-# Adopt Me
-Iniciativa: Adopt Me
+# Iniciativa - Adopt Me
+
 En Colombia se estima que hay cerca de 900 mil animales deambulando en las calles, de los cuales cerca de 12 mil estarían en Cúcuta. La ley 1774 de 2016, contra el maltrato animal, señala que el abandono es una forma de maltrato que debe erradicarse.  Para enfrentar esta problemática, las autoridades de salud han promovido la adopción de mascotas, junto con campañas de tenencia responsable y la esterilización.
 
 De aquí nace la iniciativa tecnológica “Adopta un Amigo” que tiene como objetivo principal fomentar la adopción para disminuir el abandono animal, aprovechando la tendencia que se está generando en todo el mundo y que está cambiando la manera en que las personas se relacionan con los animales.
