@@ -14,4 +14,4 @@ La segunda opción es la de animales en situación de abandono. En esta, los usu
 
 Es importante resaltar que esta aplicación es sólo un medio de comunicación, en la que se brinda el espacio para que los ciudadanos intercambien información.
 
-Dana Paulina vera Chaparro - Lizeth Rios Epalza 2019 © Todos los derechos reservados
+Dana Paulina Vera Chaparro - Lizeth Rios Epalza 2019 © Todos los derechos reservados
