@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>ADOPT ME</title>
+    <link type="image/x-icon" rel="Shortcut Icon" href="../assets/paper_img/favicon.ico"/>
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" rel="stylesheet" href="../bootstrap3/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/ct-paper.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/demo.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/examples.css"/>
+    <!--    Fonts and icons   -->
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+</h:head>
+<body>
+	<nav class="navbar navbar-ct-transparent navbar-fixed-top"
+		role="navigation-demo" id="register-navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navigation-example-2">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.xhtml">ADOPT ME</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navigation-example-2">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="iniciarSesion.xhtml"
+						class="btn btn-light btn-fill">Iniciar Sesion</a></li>
+					<li><a href="registro.xhtml"
+						class="btn btn-light btn-fill">Registro</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.container-->
+	</nav>
+
+	<div class="wrapper">
+		<div class="register-background">
+			<div class="filter-black"></div>
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+						<div class="register-card">
+							<h3 class="title">BIENVENIDO</h3>
+							<h:form class="register-form">
+								<label>Nombre</label> 
+								<h:inputText type="text" value="#{usuarioBean.usuario.nombre}" class="form-control" placeholder="Nombre" required="true"/> 
+								<label>Correo</label> 
+								<h:inputText type="text" value="#{usuarioBean.usuario.correo}" class="form-control" placeholder="Email" required="true"/>
+								<label>Telefono</label> 
+								<h:inputText type="text" value="#{usuarioBean.usuario.telefono}" class="form-control" placeholder="Telefono" required="true"/>
+								<label>Contraseña</label>
+								<h:inputSecret type="password" value="#{usuarioBean.usuario.contraseña}" class="form-control" placeholder="Password" required="true"/>
+								<h:commandButton class="btn btn-block bg:#9B9B9B" value ="Registrarme" action = "#{usuarioBean.registrar()}" />
+								
+							</h:form>
+							<div class="forgot">
+								<p>¿Ya tienes una cuenta?<a href="iniciarSesion.xhtml" class="btn btn-simple btn-danger" style="margin-top: 0px;">Inicia Sesion</a></p>
+							</div>
+							<div>
+							<h:outputText value="#{usuarioBean.alerta2}" style="color: red; display: block; width:100%; text-align:center;"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer register-footer text-center">
+				<h6>
+					&copy; 2019, Hecho Por: Estudiantes Ingenieria de Sistemas UFPS<i
+						class="fa fa-heart heart"></i> Lizeth Rios(1151177) - Dana
+					Chaparro(1151170)
+				</h6>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>ADOPT ME</title>
+    <link type="image/x-icon" rel="Shortcut Icon" href="../assets/paper_img/favicon.ico"/>
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" rel="stylesheet" href="../bootstrap3/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/ct-paper.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/demo.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/examples.css"/>
+    <!--    Fonts and icons   -->
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+</h:head>
+<body>
+<h:panelGroup  rendered="#{usuarioBean.usuarioAutenticado != null}">
+	<nav class="navbar navbar-ct-transparent navbar-fixed-top"
+		role="navigation-demo" id="register-navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navigation-example-2">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.xhtml">ADOPT ME</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+	        <div class="collapse navbar-collapse" id="navigation-example-2">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<a href="perfil.xhtml" class="btn btn-light btn-fill">Ver Perfil</a>
+	            </li>
+	            <li>
+	                <h:form><h:commandButton class="btn btn-light btn-fill" value="Cerrar Sesión" action="#{usuarioBean.logout()}"/></h:form>
+	            </li>
+	           </ul>
+	        </div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-->
+	</nav>
+	<div class="wrapper">
+		<div class="inicio-background">
+			<div class="filter-black"></div>
+			<div class="container">
+				<h2 style="color: white; text-align: center">PUBLICACIONES</h2>
+				<h4 style="color: white;text-align: center">Ver Publicaciones De:</h4>
+			
+				<div class="row justify-content-md-center">
+					<div class="col-12 col-md-6 inicio2-card">
+						<h2 style="text-align: center; margin: 10px;"><a href="publicacionesC.xhtml" class="btn btn-simple" style="color: black;">Publicaciones de Animalitos En Condiciones De Calle</a></h2>
+      					<a href="../template/publicacionesC.xhtml"><h:graphicImage value = "../assets/images/adopcion.jpg" id="imagencalle"/></a>
+    				</div>
+    				<div class="col-12 col-md-6 inicio2-card">
+						<h2 style="text-align: center; margin: 10px;"><a href="publicacionesM.xhtml" class="btn btn-simple" style="color: black;">Publicaciones de Mascotas en Adopción</a></h2>
+      					<a href="../template/publicacionesM.xhtml"><h:graphicImage value = "../assets/images/compania.jpg" id="imagenadopcion"/></a>
+    				</div>
+				</div>
+			</div>
+			
+			<div class="footer inicio-footer text-center">
+				<h6 style="color: white">
+					&copy; 2019, Hecho Por: Estudiantes Ingenieria de Sistemas UFPS<i
+						class="fa fa-heart heart"></i> Lizeth Rios(1151177) - Dana
+					Chaparro(1151170)
+				</h6>
+			</div>
+		</div>
+	</div>
+</h:panelGroup>
+<h:panelGroup rendered="#{usuarioBean.usuarioAutenticado == null}">
+	<script type="text/javascript">
+		window.location="http://localhost:8080/DaLi";
+	</script>
+</h:panelGroup>
+</body>
+</html>
