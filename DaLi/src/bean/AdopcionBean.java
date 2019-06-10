@@ -144,6 +144,7 @@ public class AdopcionBean {
 		
 		return "publicacionesMascota";
 	}
+<<<<<<< HEAD
 	
 	public List<Adopcion> listarMisAdopciones() {
 		AdopcionDao aDao = new AdopcionDao();
@@ -169,3 +170,7 @@ public class AdopcionBean {
 		aDao.delete(a);;
 	}
 }
+=======
+
+}
+>>>>>>> 5c23346aac8d8ca3894a42163e16c8c17b3799e3

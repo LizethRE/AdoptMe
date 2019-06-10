@@ -84,6 +84,7 @@ public class CallejeroBean {
 		
 		return "publicacionesCallejeros";
 	}
+<<<<<<< HEAD
 	
 	public List<Callejero> listarMisCallejeros() {
 		CallejeroDao cDao = new CallejeroDao();
@@ -105,3 +106,6 @@ public class CallejeroBean {
 		cDao.delete(c);;
 	}
 }
+=======
+}
+>>>>>>> 5c23346aac8d8ca3894a42163e16c8c17b3799e3
