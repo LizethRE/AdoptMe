@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+      
+		<h:head>
+		<title>Adopt Me</title>
+		</h:head> 
+
+<body>
+<header>
+<b:navBar brand="Publicaciones" brandHref="#" fluid="true">
+  <f:facet name="kebab">
+      <span class="fa fa-chevron-right"></span>
+  </f:facet>
+  <b:navbarLinks>
+    <b:navLink value="Perfil" href="perfil.xhtml"></b:navLink>
+    <b:navLink value="Cerrar Sesión" href="iniciarSesion.xhtml"></b:navLink>
+  </b:navbarLinks>
+</b:navBar>
+</header>
+<ui:insert name="body">Page Body</ui:insert>
+<footer>Desarrollado por nosotros</footer>
+</body>
+		
+</html>

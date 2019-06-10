@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>ADOPT ME</title>
+    <link type="image/x-icon" rel="Shortcut Icon" href="../assets/paper_img/favicon.ico"/>
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" rel="stylesheet" href="../bootstrap3/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/ct-paper.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/demo.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/examples.css"/>
+    <!--    Fonts and icons   -->
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+</h:head>
+<body>
+<h:panelGroup  rendered="#{usuarioBean.usuarioAutenticado != null}">
+	<nav class="navbar navbar-ct-transparent" role="navigation-demo"
+		id="publicacion-navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navigation-example-2">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="color: black;" href="../index.xhtml">ADOPT ME</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navigation-example-2">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="inicio.xhtml"
+						class="btn btn-light btn-fill">Inicio</a></li>
+					<li><a href="perfil.xhtml"
+						class="btn btn-link btn-fill">Perfil</a></li>
+					<li><a href="publicacionesMascota.xhtml"
+						class="btn btn-light btn-fill">Realizar Publicación</a></li>
+					<li>
+						<h:form><h:commandButton class="btn btn-light btn-fill" value="Cerrar Sesión" action="#{usuarioBean.logout()}"/></h:form>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-->
+	</nav>
+	<div class="wrapper">
+		<div class="publicacion-header publicacion-header-image">
+			<div id="carousel">
+				<div id="carousel-example-generic" class="carousel slide"
+					data-ride="carousel">
+					<div class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+							<h:graphicImage value = "../assets/images/compania.jpg"/>
+							</div>
+							<div class="item">
+							<h:graphicImage value = "../assets/images/adopcion.jpg"/>
+							</div>
+							<div class="item">
+							<h:graphicImage value = "../assets/images/confianza.jpg"/>
+							</div>
+						</div>
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic"
+							data-slide="prev"> <span class="fa fa-angle-left"></span>
+						</a> <a class="right carousel-control"
+							href="#carousel-example-generic" data-slide="next"> <span
+							class="fa fa-angle-right"></span>
+						</a>
+					</div>
+				</div>
+				<!-- end carousel -->
+			<h5 style="text-align: center">PUBLICACIONES DE ANIMALITOS EN ADOPCIÓN</h5>
+								<div class="profile-tabs">
+						<div id="my-tab-content" class="tab-content">
+							<div class="tab-pane active" id="adopcion">
+								<div class="row">
+									<div class="col-md-6 col-md-offset-3">
+										<h:form>
+											<h:dataTable value="#{adopcionBean.listarAdopciones()}"
+												var="adopciones">
+												<h:column>
+													<div
+														class="col-md-7 col-md-offset-0 col-xs-4 col-xs-offset-1"
+														style="padding: 0px;">
+														<h:graphicImage value="#{adopciones.foto}"
+															class="img-circle img-responsive" style="max-width: 200px;"/>
+													</div>
+												</h:column>
+												<h:column>
+													<div class="col-md-12 col-md-offset-0 col-xs-10">
+														<h5 style="margin-top: 0px">
+															<small> <h:inputTextarea class="publicacion-tabs"
+																	value="#{adopciones.descripcion}" style="width: 110%;" readonly="true" />
+															</small>
+															<small>Publicacion de: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.usuario.nombre}" readonly="true" />
+															</small>
+															<br />
+															<small>Nombre del Animal: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.animal.nombre}" readonly="true" />
+															</small>
+															<br />
+															<small>Edad: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.animal.edad}" readonly="true" />
+															</small>
+															<br />
+															<small>Genero: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.animal.genero.descripcion}" readonly="true" />
+															</small>
+															<br />
+															<small>Tamaño: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.animal.tamanio.descripcion}" readonly="true" />
+															</small>
+															<br />
+															<small>Ubicacion: <h:outputText
+																	class="publicacion-tabs"
+																	value="#{adopciones.ubicacion}" readonly="true" />
+															</small>
+														</h5>										
+													</div>
+												</h:column>
+
+											</h:dataTable>
+										</h:form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+			</div>
+			<div class="footer publicacion-footer text-center">
+				<h6>
+					&copy; 2019, Hecho Por: Estudiantes Ingenieria de Sistemas UFPS<i
+						class="fa fa-heart heart"></i> Lizeth Rios(1151177) - Dana
+					Chaparro(1151170)
+				</h6>
+			</div>
+		</div>
+	</div>
+</h:panelGroup>
+<h:panelGroup rendered="#{usuarioBean.usuarioAutenticado == null}">
+	<script type="text/javascript">
+		window.location="http://localhost:8080/DaLi";
+	</script>
+</h:panelGroup>
+</body>
+</html>
