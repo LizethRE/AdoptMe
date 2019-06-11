@@ -3,8 +3,10 @@ package bean;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.security.MessageDigest;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -115,7 +117,8 @@ public class AdopcionBean {
 		
 		ServletContext servletContext = (ServletContext) FacesContext.getCurrentInstance().getExternalContext().getContext();
 		System.out.println(servletContext.getResourcePaths("/publicaciones/adopcion"));
-		String path = servletContext.getRealPath("/publicaciones/adopcion");
+		//String path = servletContext.getRealPath("/publicaciones/adopcion");
+		String path = "C:/Users/Windows 7/Documents/Git/dali/DaLi/WebContent/publicaciones/adopcion";
 		System.out.println(path);
     	//InputStream inputStream=null;
     	//inputStream = archivo.getInputStream();
@@ -125,7 +128,18 @@ public class AdopcionBean {
     		System.out.println(archivoTomcat.getName());
     		System.out.println(archivoTomcat.getSize());
     		System.out.println(archivoTomcat.getContentType());
-    		String imagenSalida = animalRegistrado.getNombre() + ".jpg";
+ 
+    		String sha1 = "";
+    		try {
+    			MessageDigest digest = MessageDigest.getInstance("SHA-1");
+    	        digest.reset();
+    	        digest.update(animalRegistrado.getNombre().getBytes("utf8"));
+    	        sha1 = String.format("%040x", new BigInteger(1, digest.digest()));
+    		} catch (Exception e){
+    			e.printStackTrace();
+    		}  		
+    		
+    		String imagenSalida = sha1 + ".jpg";
     		imagen = "../publicaciones/adopcion/" + imagenSalida;
     		
 	        Files.copy(imgEntrada, new File(path, imagenSalida).toPath(), StandardCopyOption.REPLACE_EXISTING);
@@ -136,15 +150,17 @@ public class AdopcionBean {
 		aDao.insert(adopcion);
 		
 		//Volver null para que no guarde las variables insertadas
-		adopcion = null;
-		animal = null;
-		comboTipoAnimal = null;
-		comboGenero = null;
-		comboTamanio = null;
+		adopcion.setDescripcion("");
+		adopcion.setFoto("");
+		adopcion.setUbicacion("");
+		animal.setNombre("");
+		animal.setEdad("");
+		comboTipoAnimal = "";
+		comboGenero = "";
+		comboTamanio = "";
 		
 		return "publicacionesMascota";
 	}
-<<<<<<< HEAD
 	
 	public List<Adopcion> listarMisAdopciones() {
 		AdopcionDao aDao = new AdopcionDao();
@@ -170,7 +186,3 @@ public class AdopcionBean {
 		aDao.delete(a);;
 	}
 }
-=======
-
-}
->>>>>>> 5c23346aac8d8ca3894a42163e16c8c17b3799e3

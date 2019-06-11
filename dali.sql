@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2019 a las 06:12:29
+-- Tiempo de generación: 11-06-2019 a las 14:53:51
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -42,8 +42,7 @@ CREATE TABLE `adopcion` (
 --
 
 INSERT INTO `adopcion` (`id`, `idusuario`, `idanimal`, `descripcion`, `foto`, `ubicacion`) VALUES
-(1, 'desoft@gmail.com', 3, 'Gato super lindo busca hogar urgente', '../publicaciones/adopcion/Garfi.jpg', 'Mi casa'),
-(2, 'desoft@gmail.com', 4, 'Perro busca nuevo hogar', '../publicaciones/adopcion/Garfi.jpg', 'Mi casa');
+(1, 'desoft@gmail.com', 1, 'Por motivo de viaje doy a mi perro en adopcion.', '../publicaciones/adopcion/f22290c9dd14baf8f73a816ab4ab19bffe1d9243.jpg', 'Mi casa');
 
 -- --------------------------------------------------------
 
@@ -65,10 +64,7 @@ CREATE TABLE `animal` (
 --
 
 INSERT INTO `animal` (`id`, `nombre`, `idtipoanimal`, `edad`, `idgenero`, `idtamanio`) VALUES
-(3, 'Michi', 2, '3 Años', 2, 2),
-(4, 'Zeus', 1, '2 Años', 2, 3),
-(5, 'Garfi', 2, '1 Año', 2, 2),
-(6, 'Garfi', 2, '1 Año', 2, 2);
+(1, 'Coffe', 1, '5 Meses', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -90,9 +86,8 @@ CREATE TABLE `callejero` (
 --
 
 INSERT INTO `callejero` (`id`, `idusuario`, `descripcion`, `foto`, `nombrecontacto`, `telefonocontacto`) VALUES
-(1, 'desoft@gmail.com', 'Perro busca hogar urgente', '../publicaciones/callejero/prueba.jpg', 'Pepita', '555'),
-(2, 'dana@gmail.com', 'Perro busca hogar', '../publicaciones/callejero/prueba.jpg', 'Pepita', '555'),
-(3, 'desoft@gmail.com', 'Perro busca hogar !urgente¡', '../publicaciones/callejero/prueba.jpg', 'Pepita Perez', '3145301464');
+(1, 'dana@gmail.com', 'Esta hermosa gata está buscando un hogar adoptivo. \r\nSi estás interesado/a en hacerla parte de tu familia por favor escribe o llamar.', '../publicaciones/callejero/3e182b1ea9376483a38614d916a0b666ef531b6d.jpg', 'Maria', '3145301464'),
+(2, 'desoft@gmail.com', 'Gato en condición de calle. Urgente de unas manos cariñosas que le salven la vida. ', '../publicaciones/callejero/cc042292474fdb5897142258e697ba0f8b94115b.jpg', 'Andrea', '3125944671');
 
 -- --------------------------------------------------------
 
@@ -171,11 +166,11 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`nombre`, `foto`, `telefono`, `correo`, `contraseña`) VALUES
-('Dana', '/assets/paper_img/banks.jpg', '55555', 'dana@gmail.com', 'dana'),
-('DeSoft', '/assets/paper_img/placeholder.jpg', '3145301464', 'desoft@gmail.com', 'desoft'),
-('Eduardo Cruces', '/assets/paper_img/chet_faker_1.jpg', '333', 'eduardo@gmail.com', 'eduardo'),
-('Thaliana', '/assets/paper_img/placeholder.jpg', '555', 'thali@gmail.com', 'thali'),
-('Yorgi', '/assets/paper_img/chet_faker_2.jpg', '555', 'yorgi@gmail.com', 'yorgi');
+('Dana', '/assets/paper_img/banks.jpg', '3145555555', 'dana@gmail.com', 'dana'),
+('DeSoft', '/assets/paper_img/placeholder.jpg', '3145555555', 'desoft@gmail.com', 'desoft'),
+('Eduardo Cruces', '/assets/paper_img/chet_faker_1.jpg', '3145555555', 'eduardo@gmail.com', 'eduardo'),
+('Thaliana', '/assets/paper_img/placeholder.jpg', '3145555555', 'thali@gmail.com', 'thali'),
+('Yorgi', '/assets/paper_img/chet_faker_2.jpg', '3145555555', 'yorgi@gmail.com', 'yorgi');
 
 --
 -- Índices para tablas volcadas
@@ -237,19 +232,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `adopcion`
 --
 ALTER TABLE `adopcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `animal`
 --
 ALTER TABLE `animal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `callejero`
 --
 ALTER TABLE `callejero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `genero`

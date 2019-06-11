@@ -1529,7 +1529,11 @@ textarea.form-control {
     background-color: transparent; }
 
 .img-rounded {
-  border-radius: 8px;
+  width: 200px; 
+  height: 200px; 
+  max-width: 200px; 
+  max-height: 200px;
+  border-radius: 100px;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
   transition: opacity 0.5s ease 0s; }
 

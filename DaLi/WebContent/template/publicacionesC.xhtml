@@ -97,14 +97,15 @@
 						</div>
 					</div>
 					<!-- end carousel -->
-					<h5 style="text-align: center">PUBLICACIONES DE ANIMALITOS EN
+					<h5 style="text-align: center; margin-top: 5%;">PUBLICACIONES DE ANIMALITOS EN
 						CONDICIÓN DE CALLE</h5>
+					<hr style="border: 1px solid black; margin-bottom: 3%;"></hr>
 
 					<div class="profile-tabs">
 						<div id="my-tab-content" class="tab-content">
 							<div class="tab-pane active" id="adopcion">
-								<div class="row">
-									<div class="col-md-6 col-md-offset-3">
+								<div class="row pmascota-card">
+									<div class="container">
 										<h:form>
 											<h:dataTable value="#{callejeroBean.listarCallejeros()}"
 												var="callejeros">
@@ -113,33 +114,33 @@
 														class="col-md-7 col-md-offset-0 col-xs-4 col-xs-offset-1"
 														style="padding: 0px;">
 														<h:graphicImage value="#{callejeros.foto}"
-															class="img-circle img-responsive"
-															style="max-width: 200px;" />
+															class="img-rounded img-responsive" />
 													</div>
 												</h:column>
 												<h:column>
 													<div class="col-md-12 col-md-offset-0 col-xs-10">
-														<h5 style="margin-top: 0px">
-															<small> <h:inputTextarea class="publicacion-tabs"
+														<h5 style="margin-top: 15%; margin-left: 10%">
+															<small> <h:inputTextarea class="publicacion-tabs pmascota"
 																	value="#{callejeros.descripcion}" style="width: 110%;" readonly="true" />
 															</small>
-															<small>Publicacion de: <h:outputText
+															<small><strong id="strong">Publicacion de: </strong><h:outputText
 																	class="publicacion-tabs"
 																	value="#{callejeros.usuario.nombre}" readonly="true" />
 															</small>
 															<br />
-															<small>Nombre de Contacto: <h:outputText
+															<small><strong id="strong">Nombre de Contacto: </strong><h:outputText
 																	class="publicacion-tabs"
 																	value="#{callejeros.nombrecontacto}" readonly="true" />
 															</small>
 															<br />
-															<small>Telefono de Contacto: <h:outputText
+															<small><strong id="strong">Telefono de Contacto: </strong><h:outputText
 																	class="publicacion-tabs"
 																	value="#{callejeros.telefonocontacto}" readonly="true" />
 															</small>
 														</h5>
-													</div>
-												</h:column>
+														<hr style="border: 1px solid black;"></hr>
+													</div>												
+												</h:column>												
 											</h:dataTable>
 										</h:form>
 									</div>
@@ -150,7 +151,7 @@
 
 
 				</div>
-				<div class="footer publicacion-footer text-center">
+				<div class="footer publicacion-footer text-center" style="margin-top: 5%;">
 					<h6>
 						&copy; 2019, Hecho Por: Estudiantes Ingenieria de Sistemas UFPS<i
 							class="fa fa-heart heart"></i> Lizeth Rios(1151177) - Dana

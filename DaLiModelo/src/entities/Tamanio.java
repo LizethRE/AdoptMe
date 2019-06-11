@@ -10,6 +10,7 @@ import java.util.List;
  * 
  */
 @Entity
+@Table(name="tamanio")
 @NamedQuery(name="Tamanio.findAll", query="SELECT t FROM Tamanio t")
 public class Tamanio implements Serializable {
 	private static final long serialVersionUID = 1L;

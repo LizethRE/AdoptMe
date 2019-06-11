@@ -1,3 +1,7 @@
+#strong {
+  color: black;	
+}
+
 .mascota-background {
   background-image: url("../images/compania.jpg");
   background-position: center center;
@@ -139,8 +143,60 @@
 
 .inicio-card .forgot {
   text-align: center; }
+ 
+.perfilp-card {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  color: #B6B6B6;
+  margin: auto;
+  width: 700px;
+  min-height: 400px;
+  padding: 30px; }
+
+.perfilp {
+  border-radius: 8px;
+}
+
+.perfilp-card label {
+  margin-top: 15px; }
+
+.perfilp-card .title {
+  color: black;
+  text-align: center; }
   
-  .inicio2-card {
+.perfilp-card .btn {
+  margin-top: 30px; }
+
+.perfilp-card .forgot {
+  text-align: center; }
+
+.pmascota-card {
+  background-color: #F1F1F1;
+  border-radius: 8px;
+  color: #B6B6B6;
+  margin: auto;
+  width: 700px;
+  min-height: 400px;
+  padding: 30px; }
+
+.pmascota {
+  border-radius: 8px;
+}
+
+.pmascota-card label {
+  margin-top: 15px; }
+
+.pmascota-card .title {
+  color: black;
+  text-align: center; }
+  
+.pmascota-card .btn {
+  margin-top: 30px; }
+
+.pmascota-card .forgot {
+  text-align: center; }
+  
+.inicio2-card {
   background-color: #F1F1F1;
   border-radius: 10px;
   margin: 15px;
